@@ -52,7 +52,7 @@ function displayStudentData(index) {
   const student = studentData[index];
   if (student) {
     name_change(capitalizeFirstLetter(student.name), student.teachers_name); // change student,teacher name
-    smy_change(student.section, student.month, student.year); // change section,month,year
+    smy_change(student.section.toUpperCase(), student.month, student.year); // change section,month,year
 
     // to update scores
     score_fun(english, student.english);
@@ -151,7 +151,7 @@ document.getElementById("download").addEventListener("click", function () {
   html2canvas(card, { willReadFrequently: true }).then((canvas) => {
     canvas.toBlob(function (blob) {
       const link = document.createElement("a");
-      link.download = `${studentName.innerText} - ${section.innerText} report-card.jpg`;
+      link.download = `${studentName1.innerText} - ${section.innerText.toUpperCase()} report-card.jpg`;
       link.href = URL.createObjectURL(blob);
 
       link.click();
@@ -178,7 +178,7 @@ function download_all_student(student_name_down, student_sec) {
 download_all.addEventListener("click", () => {
   for (let i = 0; i < studentData.length; i++) {
     const student = studentData[i];
-    name_change(student.name, student.teachers_name);
+    name_change(capitalizeFirstLetter(student.name), student.teachers_name);
     smy_change(student.section, student.month, student.year);
 
     // to update scores
@@ -194,6 +194,6 @@ download_all.addEventListener("click", () => {
     // score_fun(class_overall,student.classeng);
     score_fun(attendance, student.attendance);
     score_fun(behavior, student.behavior);
-    download_all_student(student.name, student.section);
+    download_all_student(capitalizeFirstLetter(student.name), student.section.toUpperCase());
   }
 });
