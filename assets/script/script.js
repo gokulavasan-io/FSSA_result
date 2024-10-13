@@ -151,7 +151,7 @@ document.getElementById("download").addEventListener("click", function () {
   html2canvas(card, { willReadFrequently: true }).then((canvas) => {
     canvas.toBlob(function (blob) {
       const link = document.createElement("a");
-      link.download = `${studentName1.innerText} - ${section.innerText.toUpperCase()} report-card.jpg`;
+      link.download = `${section.innerText.toUpperCase()} - ${studentName1.innerText} - report-card.jpg`;
       link.href = URL.createObjectURL(blob);
 
       link.click();
@@ -163,11 +163,11 @@ document.getElementById("download").addEventListener("click", function () {
 
 // to download all students report card at once
 
-function download_all_student(student_name_down, student_sec) {
+function download_all_student(student_name_download, student_sec) {
   html2canvas(card, { willReadFrequently: true }).then((canvas) => {
     canvas.toBlob(function (blob) {
       const link = document.createElement("a");
-      link.download = `${student_name_down} - ${student_sec} report-card.jpg`;
+      link.download = `${student_sec} - ${student_name_download} - report-card.jpg`;
       link.href = URL.createObjectURL(blob);
       link.click();
       URL.revokeObjectURL(link.href);
