@@ -198,9 +198,3 @@ download_all.addEventListener("click", () => {
   }
 });
 
-
-// to download the image 1131 X 1600 resolution
-
-window.onload = function() {
-  document.body.style.zoom = "67%";
-};
