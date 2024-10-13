@@ -32,7 +32,7 @@ body {
 }
 
 .fw-logo {
-    width: 100px;
+    width: 70px;
 }
 
 .name {
@@ -385,8 +385,8 @@ span {
 
 @keyframes blink {
     50% {
-        opacity: .3;
-
+        opacity: .8;
+        transform: scale(.95);
     }
 }
 
@@ -405,7 +405,7 @@ textarea {
     resize: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     outline: none;
-    
+
 }
 
 textarea:focus {
@@ -432,8 +432,8 @@ h1 {
     padding: .8rem 0;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
+    border-bottom: 3px dotted white;
 }
-
 
 .footer {
     position: absolute;
@@ -445,6 +445,7 @@ h1 {
     text-align: center;
     border-top-left-radius: 90%;
     border-top-right-radius: 90%;
+    border-top: 3px dotted white;
 }
 
 .link-container button {
@@ -483,7 +484,7 @@ button {
     background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
     font-weight: bolder;
     transform: scale(.9);
-}   
+}
 
 #previous-person {
     background-color: #d9aa0d;
@@ -533,5 +534,39 @@ button {
     color: rgb(255, 255, 255);
     font-weight: bolder;
     transform: scale(.9);
+
+}
+
+
+
+
+
+.rainbow-line {
+    width: 15px;
+    height: 100%;
+    /* Thickness of the line */
+    background: linear-gradient(-250deg,
+            red,
+            orange,
+            yellow,
+            green,
+            blue,
+            indigo,
+            violet);
+    border-radius: 2.5px;
+    /* Rounded corners, optional */
+    position: absolute;
+    z-index: -1;
+
+}
+
+.line-1 {
+    right: 0;
+    border-left: 5px dotted rgb(255, 255, 255);
+}
+
+.line-2 {
+    left: 0;
+    border-right: 5px dotted rgb(255, 255, 255);
 
 }

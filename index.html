@@ -6,7 +6,7 @@
     <title>FSSA report card downloader</title>
 
     <!-- stylesheet and favicon link -->
-    <link rel="icon" type="image/x-icon" href="./assets/images/ic_fw.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/ic_fw.png" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
     <!-- fonts link -->
@@ -23,18 +23,24 @@
   </head>
   <body>
     <h1>
-      <img src="./assets/images/ic_fw.png" alt="" class="fw-logo" />FSSA Report card
-      Downloader
+      <img src="./assets/images/ic_fw.png" alt="" class="fw-logo" />FSSA
+      <b>Report card Downloader</b>
     </h1>
 
     <div class="link-container">
       <form id="input-field">
-        <label for="">Paste the result in JSON format</label>
-        <p class="zoom">❗Please set your browser zoom level to <span>67%</span> to get the image in 1131 X 1600 resolution </p>
+        <label for="">Paste the result data in <b>JSON</b> format</label>
+        <p class="zoom">
+          ❗Please set your browser zoom level to <span>67%</span> to get the
+          image in 1131 X 1600 resolution
+        </p>
         <textarea
           name=""
           id="json"
-          placeholder="Eg:  [{name:xxx,section:y,marks:99%}]"
+          placeholder="Eg:  [ { name: xxx ,
+            section: y ,
+            marks: 99%
+        } ]"
         ></textarea>
         <button type="submit" id="get_result">Get result</button>
       </form>
@@ -183,6 +189,8 @@
     <div class="footer">
       <p>&copy; Copyright to FSSA 2024</p>
     </div>
+    <div class="rainbow-line line-1"></div>
+    <div class="rainbow-line line-2"></div>
 
     <script src="./assets/script/script.js"></script>
 
