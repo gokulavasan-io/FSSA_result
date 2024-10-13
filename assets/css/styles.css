@@ -374,24 +374,11 @@ span {
 
 .link-container label {
     color: rgb(225, 7, 7);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.link-container label b{
     font-weight: bolder;
-    font-size: 2rem;
-}
-
-.zoom {
-    color: blue;
-    animation: blink 3s infinite;
-}
-
-@keyframes blink {
-    50% {
-        opacity: .8;
-        transform: scale(.95);
-    }
-}
-
-.zoom span {
-    font-weight: bold;
 }
 
 textarea {
@@ -544,7 +531,6 @@ button {
 .rainbow-line {
     width: 15px;
     height: 100%;
-    /* Thickness of the line */
     background: linear-gradient(-250deg,
             red,
             orange,
@@ -553,8 +539,6 @@ button {
             blue,
             indigo,
             violet);
-    border-radius: 2.5px;
-    /* Rounded corners, optional */
     position: absolute;
     z-index: -1;
 

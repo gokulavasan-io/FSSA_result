@@ -197,3 +197,10 @@ download_all.addEventListener("click", () => {
     download_all_student(capitalizeFirstLetter(student.name), student.section.toUpperCase());
   }
 });
+
+
+// to download the image 1131 X 1600 resolution
+
+window.onload = function() {
+  document.body.style.zoom = "67%";
+};
