@@ -29,7 +29,7 @@ const submit = document.getElementById("get_result");
 // .................... variables end ............ //
 
 let studentData;
-let currentIndex = 0; // Initialize currentIndex
+let currentIndex = 0;  // Initialize currentIndex - for student
 
 document.querySelector("#input-field").addEventListener("submit", (event) => {
   event.preventDefault(); // Prevent form submission
@@ -44,7 +44,6 @@ document.querySelector("#input-field").addEventListener("submit", (event) => {
   }
 });
 
-// let currentIndex = 0; // first student and to track students
 
 //  to display the current student's information
 
@@ -161,6 +160,9 @@ document.getElementById("download").addEventListener("click", function () {
     }, "image/jpeg");
   });
 });
+
+
+
 
 // to download all students report card at once
 
