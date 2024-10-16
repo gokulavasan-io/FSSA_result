@@ -60,16 +60,17 @@ function displayStudentData(index) {
     score_fun(life_skills, student.lifeskills);
     score_fun(problem_solving, student.problem_solving);
     score_fun(overall, student.overall);
-    // score_fun(class_eng,student.class_eng);
-    // score_fun(class_els,student.class_els);
-    // score_fun(class_tech,student.class_eng);
-    // score_fun(class_pb,student.class_eng);
-    // score_fun(class_overall,student.class_eng);
-
     score_fun(attendance, student.attendance);
     score_fun(behavior, student.behavior);
 
-    // // to change names in previous,next
+    // for class average
+    score_fun(class_eng,student.class_english);
+    score_fun(class_els,student.class_lifeskills);
+    score_fun(class_tech,student.class_tech);
+    score_fun(class_pb,student.class_problem_solving);
+    score_fun(class_overall,student.class_overall);    
+
+    // // to change previous and next name in bottom 
     let prevIndex = index > 0 ? index - 1 : studentData.length - 1;
     let nextIndex = index < studentData.length - 1 ? index + 1 : 0;
     prev_next_name(capitalizeFirstLetter(studentData[prevIndex].name), capitalizeFirstLetter(studentData[nextIndex].name));
@@ -187,13 +188,17 @@ download_all.addEventListener("click", () => {
     score_fun(life_skills, student.lifeskills);
     score_fun(problem_solving, student.problem_solving);
     score_fun(overall, student.overall);
-    // score_fun(class_eng,student.class_eng);
-    // score_fun(class_els,student.class_els);
-    // score_fun(class_tech,student.classeng);
-    // score_fun(class_pb,student.classeng);
-    // score_fun(class_overall,student.classeng);
     score_fun(attendance, student.attendance);
     score_fun(behavior, student.behavior);
+
+    // for class average
+    score_fun(class_eng,student.class_english);
+    score_fun(class_els,student.class_lifeskills);
+    score_fun(class_tech,student.class_tech);
+    score_fun(class_pb,student.class_problem_solving);
+    score_fun(class_overall,student.class_overall);
+
+
     download_all_student(capitalizeFirstLetter(student.name), student.section.toUpperCase());
   }
 });
