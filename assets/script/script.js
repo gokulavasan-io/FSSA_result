@@ -149,10 +149,10 @@ function capitalizeFirstLetter(str) {
 
 document.getElementById("download").addEventListener("click", function () {
   html2canvas(card, { willReadFrequently: true }).then((canvas) => {
-    canvas.toBlob(function (blob) {
+    canvas.toBlob(function (imageData) {
       const link = document.createElement("a");
       link.download = `${section.innerText.toUpperCase()} - ${studentName1.innerText} - report-card.jpg`;
-      link.href = URL.createObjectURL(blob);
+      link.href = URL.createObjectURL(imageData);
 
       link.click();
 
@@ -168,10 +168,10 @@ document.getElementById("download").addEventListener("click", function () {
 
 function download_all_student(student_name_download, student_sec) {
   html2canvas(card, { willReadFrequently: true }).then((canvas) => {
-    canvas.toBlob(function (blob) {
+    canvas.toBlob(function (imageData) {
       const link = document.createElement("a");
       link.download = `${student_sec} - ${student_name_download} - report-card.jpg`;
-      link.href = URL.createObjectURL(blob);
+      link.href = URL.createObjectURL(imageData);
       link.click();
       URL.revokeObjectURL(link.href);
     }, "image/jpeg");
