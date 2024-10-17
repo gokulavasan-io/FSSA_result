@@ -18,7 +18,7 @@ body {
 
 .report-card {
     width: 1131px;
-    height: 1600px;
+    height: 1800px;
     border: 3px solid rgb(154, 154, 154);
     gap: 1rem;
     position: relative;
@@ -141,7 +141,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    height: 50%;
+    height: 55%;
     background-color: #d0ebc5;
 
 }
@@ -268,7 +268,7 @@ span {
     padding: 2rem;
     position: absolute;
     right: 6rem;
-    bottom: 3rem;
+    bottom: 18%;
     gap: 1.3rem;
     justify-content: center;
 }
@@ -313,6 +313,7 @@ span {
     flex-direction: column;
     gap: .4rem;
     margin-left: 1rem;
+    margin-top: 2rem;
 }
 
 .warning p {
@@ -552,5 +553,34 @@ button {
 .line-2 {
     left: 0;
     border-right: 5px dotted rgb(255, 255, 255);
+
+}
+
+.remark{
+    height: 100px;
+    width: 95%;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    position: absolute;
+    bottom: 1rem;
+}
+.remark h4{
+    color: red;
+    font-weight: 900;
+    font-size: 1.7rem;
+    margin-left: .6rem;
+
+}
+
+.remark p{
+    font-size: 1.5rem;
+    margin-top: .1rem;
 
 }

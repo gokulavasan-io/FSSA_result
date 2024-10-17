@@ -25,6 +25,7 @@ const download_all = document.getElementById("download-all");
 const next_person = document.getElementById("next-person");
 const card = document.getElementById("report-card");
 const submit = document.getElementById("get_result");
+const remarks=document.getElementById("remark");
 
 // .................... variables end ............ //
 
@@ -52,6 +53,7 @@ function displayStudentData(index) {
   if (student) {
     name_change(capitalizeFirstLetter(student.name), student.teachers_name); // change student,teacher name
     smy_change(student.section.toUpperCase(), student.month, student.year); // change section,month,year
+    changeRemark(student.remarks);
 
     // to update scores
     score_fun(english, student.english);
@@ -61,6 +63,7 @@ function displayStudentData(index) {
     score_fun(overall, student.overall);
     score_fun(attendance, student.attendance);
     score_fun(behavior, student.behavior);
+
 
     // for class average
     score_fun(class_eng,student.class_english);
@@ -111,6 +114,10 @@ function smy_change(sec, mon, yr) {
   section.innerText = sec;
   month.innerText = mon;
   year.innerText = yr;
+}
+
+function changeRemark(remark){
+  remarks.innerText=remark;
 }
 
 // change previous and next student name for navigation
@@ -183,7 +190,8 @@ download_all.addEventListener("click", () => {
     const student = studentData[i];
     name_change(capitalizeFirstLetter(student.name), student.teachers_name);
     smy_change(student.section, student.month, student.year);
-
+    changeRemark(student.remarks);
+    
     // to update scores
     score_fun(english, student.english);
     score_fun(tech, student.tech);
