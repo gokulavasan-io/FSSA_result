@@ -151,7 +151,7 @@ document.getElementById("download").addEventListener("click", function () {
   html2canvas(card, { willReadFrequently: true }).then((canvas) => {
     canvas.toBlob(function (imageData) {
       const link = document.createElement("a");
-      link.download = `${section.innerText.toUpperCase()} - ${studentName1.innerText} - report-card.jpg`;
+      link.download = `${section.innerText.toUpperCase()} - ${studentName1.innerText} - report-card.jpg`;x
       link.href = URL.createObjectURL(imageData);
 
       link.click();
